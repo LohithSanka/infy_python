@@ -1,7 +1,7 @@
 from urllib.request import urlopen
 import sys
 
-def fetch_words(url_name):
+def fetch_word(url_name):
     story_words=[]
     story=urlopen(url_name)
     for line in story:
@@ -16,7 +16,7 @@ def print_items(items):
          print(item)
         
 def main(url_name):
-    words=fetch_words(url_name)
+    words=fetch_word(url_name)
     print_items(words)
 
 if __name__ == "__main__":
